@@ -12,10 +12,9 @@ class HttpSpec extends Specification {
   "AsyncHttp" should {
     "get async" in {
       val req = :/("api.foursquare.com") / "v2/test" secure
+      val f = Http(req as_str)
       
-	  val f = Http(req as_str)
-	  
-	  f() must_== """{message: "hi"}"""
+      f() must_== """{message: "hi"}"""
     }
   }
 }
