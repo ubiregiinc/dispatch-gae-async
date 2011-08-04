@@ -1,0 +1,9 @@
+classpath
+.project
+.settings
+target
+lib_managed
+project/boot
+project/plugins/project
+.idea
+*.iml
