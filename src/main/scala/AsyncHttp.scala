@@ -1,4 +1,4 @@
-package pomu.dispatch.gae.async
+package net.pomu.dispatch.gae.async
 
 import dispatch._
 import com.google.appengine.api.urlfetch._
@@ -70,6 +70,10 @@ trait Http extends HttpExecutor with BlockingCallback {
  */
 object Http extends Http {
   val fetchOptions = FetchOptions.Builder.withDefaults
+  
+  def apply(opts: FetchOptions) = new Http {
+    val fetchOptions = opts
+  }
 }
 
 /**

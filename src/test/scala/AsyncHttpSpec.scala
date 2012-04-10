@@ -1,4 +1,4 @@
-package pomu.dispatch.gae.async
+package net.pomu.dispatch.gae.async
 
 import dispatch._
 import org.slim3.tester.AppEngineTester
