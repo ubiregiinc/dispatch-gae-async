@@ -1,8 +1,8 @@
 name := "dispatch-gae-async"
 
-version := "0.1.2"
+version := "0.2.0"
 
-scalaVersion := "2.9.1"
+scalaVersion := "2.9.2"
 
 organization := "net.pomu"
 
@@ -10,7 +10,7 @@ organization := "net.pomu"
 resolvers += "The Seasar Foundation Maven2 Repository" at "http://maven.seasar.org/maven2"
 
 libraryDependencies ++= Seq(
-  "net.databinder" %% "dispatch-http" % "0.8.6",
+  "net.databinder" %% "dispatch-http" % "0.8.9",
   "org.scala-tools.testing" %% "specs" % "1.6.9" % "test",
   "org.slim3" % "slim3" % "1.0.12" % "test",
   "com.google.appengine" % "appengine-api-1.0-sdk" % "1.5.1"
@@ -18,3 +18,5 @@ libraryDependencies ++= Seq(
 )
 
 //seq(sbtappengine.Plugin.webSettings: _*)
+
+resolvers += Resolver.sonatypeRepo("releases") 

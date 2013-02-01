@@ -1,6 +1,6 @@
 package net.pomu.dispatch.gae.async
 
-import dispatch._
+import dispatch.classic._
 import com.google.appengine.api.urlfetch._
 import org.apache.http.{HttpHost,HttpRequest,HttpResponse,HttpEntity,ProtocolVersion}
 import org.apache.http.message.{BasicHttpResponse}
