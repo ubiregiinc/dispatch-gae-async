@@ -98,4 +98,6 @@ class FutureResponseWrapper[A](j: java.util.concurrent.Future[HTTPResponse], han
   }
   
   def isSet = j.isDone
+  
+  implicit def toA: A = apply
 }
