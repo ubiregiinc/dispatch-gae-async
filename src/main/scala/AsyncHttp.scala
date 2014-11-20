@@ -90,6 +90,7 @@ class FutureResponseWrapper[A](j: java.util.concurrent.Future[HTTPResponse], han
     }
     val bae = new ByteArrayEntity(res.getContent)
     bae.setContentType(response.getFirstHeader("Content-Type"))
+    bae.setContentEncoding(response.getFirstHeader("Content-Encoding"))
     response.setEntity(bae)
     
     handler(response)
