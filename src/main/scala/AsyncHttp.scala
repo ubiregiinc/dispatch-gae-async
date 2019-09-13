@@ -88,9 +88,9 @@ class FutureResponseWrapper[A](j: java.util.concurrent.Future[HTTPResponse], han
     res.getHeaders.foreach{h => 
       response.addHeader(h.getName, h.getValue)
     }
-    val bae = new ByteArrayEntity(res.getContent)
-    bae.setContentType(response.getFirstHeader("Content-Type"))
-    bae.setContentEncoding(response.getFirstHeader("Content-Encoding"))
+    val bae = new ByteArrayEntity(Option(res.getContent) getOrElse new Array[Byte](0))
+    Option(response.getFirstHeader("Content-Type")).foreach{ bae.setContentType }
+    Option(response.getFirstHeader("Content-Encoding")).foreach{ bae.setContentEncoding }
     response.setEntity(bae)
     
     handler(response)
