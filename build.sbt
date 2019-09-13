@@ -1,6 +1,6 @@
 name := "dispatch-gae-async"
 
-version := "0.2.2"
+version := "0.2.4"
 
 crossScalaVersions := Seq("2.9.2", "2.10.4")
 
